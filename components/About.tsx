@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 sm:py-32 px-6 bg-black/[0.02]">
       <div className="container mx-auto max-w-4xl lg:max-w-5xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -21,7 +21,7 @@ export default function About() {
 
         <div className="flex flex-col md:flex-row items-start justify-center gap-12 md:gap-20 mb-20">
           {/* Profile Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -30,8 +30,8 @@ export default function About() {
           >
             <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl overflow-hidden border border-black/10 relative shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
               <Image
-                src="/img/rushantavatar.png"
-                alt="Rushant Golakiya"
+                src="/img/meimage.jpeg"
+                alt="Niket Dadhaniya"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 400px"
@@ -40,7 +40,7 @@ export default function About() {
           </motion.div>
 
           {/* Cards */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -63,9 +63,9 @@ export default function About() {
               <h3 className="text-xl font-bold text-black mb-2 font-sans">Education</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-black/60 font-mono text-[10px] uppercase tracking-widest">B.C.A</p>
-                  <p className="text-black/80 text-sm font-bold">VNSGU - Surat, Gujarat</p>
-                  <p className="text-black/60 font-mono text-xs">Apr-2022 | CGPA: 6.39</p>
+                  <p className="text-black/60 font-mono text-[10px] uppercase tracking-widest">B.E.</p>
+                  <p className="text-black/80 text-sm font-bold">Mahavir swami college of Eng and tech - Surat, Gujarat</p>
+                  <p className="text-black/60 font-mono text-xs">Apr-2019 | CGPA: 6.65</p>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function About() {
         </div>
 
         {/* Text */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -81,8 +81,8 @@ export default function About() {
           className="max-w-3xl mx-auto space-y-8"
         >
           <p className="text-black/70 text-lg sm:text-xl leading-relaxed font-mono">
-            I'm a <span className="text-black font-bold">React Native Developer</span> with expertise in building cross-platform mobile applications. 
-            I specialize in managing dual-flow apps, native module development, and integrating real-time features using Firebase, Supabase, and cloud storage solutions.
+            I'm a <span className="text-black font-bold">React Native Developer</span> with expertise in building cross-platform mobile applications.
+            I specialize in managing dual-flow apps, native module development, and integrating real-time features using Firebase, Supabase, and REST API integration.
           </p>
         </motion.div>
       </div>

@@ -6,22 +6,26 @@ export default function Experience() {
   const technicalSkills = [
     'React Native CLI',
     'Expo',
-    'JavaScript',
-    'TypeScript',
     'Android Studio',
     'Xcode',
+    'JavaScript',
+    'TypeScript',
     'Firebase',
     'Supabase',
-    'REST API',
+    'REST API Integration',
     'Redux Toolkit',
     'Zustand',
     'AWS SDK',
     'DigitalOcean Spaces',
-    'PostgreSQL',
     'MongoDB',
+    'PostgreSQL',
     'MMKV',
     'RNFS',
     'Vision Camera',
+    'Google Ads',
+    'Google ADX',
+    'Google AdMob',
+    'Firebase Analytics',
   ];
 
   const toolsSkills = [
@@ -43,41 +47,44 @@ export default function Experience() {
     {
       company: 'Codetown Technologies',
       location: 'Remote',
-      timeframe: 'Jul 2025 - Present',
+      timeframe: 'November 25 - Present',
       role: 'React Native Developer',
       achievements: [
-        'Managed 3 dual-flow apps, ensuring clear separation of features and smooth, reliable user experience.',
-        'Built a compact Android location native module and socket-based features for real-time updates. Worked on 10+ projects, upgraded 5+ apps to higher Android API levels, and fixed legacy library issues to boost performance and stability.',
-        'Led a major restructuring of the Intellipaat app—fixing outdated code, improving structure, enhancing overall performance and user experience.',
+        'Managed 1 dual-flow apps, ensuring clear separation of features and smooth, reliable user experience.',
+        'Upgraded 5+ apps to higher Android API levels, and fixed legacy library issues to boost performance and stability.',
+        'Built a real-time public transit navigation app with live bus tracking, route planning, and map-based stop visualization using React Native.',
+        'Developed POS printing functionality with Thermal Printer SDK, enabling invoice and receipt printing.',
       ],
     },
     {
-      company: 'Codonnier Solutions',
-      location: 'Remote',
-      timeframe: 'Nov 2024 - Jul 2025',
-      role: 'Senior React Native Developer',
+      company: 'Unikwork LLP.',
+      location: 'Surat, Gujarat',
+      timeframe: 'May 2024 - November 2025',
+      role: 'React Native Developer',
       achievements: [
-        'Worked as a senior React Native developer, independently driving COR, Habit-Builder, and AutoTrak projects from scratch to deployment. Translated complex wireframes into stable cross-platform applications, leveraging Supabase, REST APIs, and DigitalOcean Spaces (AWS SDK) for secure media workflows.',
-        'Handled 7+ client projects end-to-end, managing delivery, performance, and technical decisions. Strengthened client communication and ensured timely, high-quality releases across multiple projects.',
+        'Developing feature-rich React Native applications with a focus on performance, scalability, and clean architecture.',
+        'Implementing real-time data handling, push notifications, and secure authentication using Firebase and Supabase.',
+        'Integrated REST APIs, Firebase services (Authentication, Firestore, Analytics, Remote Config, Push Notifications), and Stripe payment gateway.',
       ],
     },
     {
-      company: 'Tagline Infotech LLP',
-      location: 'Gujarat, India',
-      timeframe: 'May 2024 - Oct 2024',
+      company: 'Vacuity Pvt Ltd',
+      location: 'Surat, Gujarat',
+      timeframe: 'November 2022 - April 2024',
       role: 'React Native Developer',
       achievements: [
-        'Improved overall code quality and performance by ~30% through optimized state management (Redux Toolkit, Zustand), contributed to 5+ production projects, and gained strong release experience using Google Play Console and App Store Connect, along with API testing and debugging using Postman.',
-        'Mastered Google Ads and integrated Firebase (Auth, Firestore, Remote Config, Analytics, Push Notifications) to build scalable and real-time mobile features.',
+        'Built and optimized cross-platform mobile applications using React Native, improving performance by ~30% with Redux Toolkit.',
+        'Integrated Firebase (Auth, Firestore, Analytics, Push Notifications), Stripe payments, and deep linking.',
+        'Released and maintained production apps via Google Play Console & App Store Connect, with API testing using Postman.',
       ],
     },
     {
-      company: 'Artistry Solution',
-      location: 'Gujarat, India',
-      timeframe: 'May 2023 - Apr 2024',
-      role: 'React Native Developer',
+      company: 'Tenacious Techies',
+      location: 'Surat, Gujarat',
+      timeframe: 'Dec 2021 - July 2022',
+      role: 'Web designer',
       achievements: [
-        'Worked on my first React Native projects during a strong learning phase, contributing to 2 apps like FAX and Call Recording with OCR, PDF generation, and media handling features. Gained practical experience with Firebase, Redux, and FFMPEG while learning best practices from senior developers and improving early app stability and performance.',
+        'Initiated professional career as a Web Designer, mastering foundational frontend technologies including HTML5, CSS3, and JavaScript.',
       ],
     },
   ];
@@ -85,7 +92,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 sm:py-32 px-6">
       <div className="container mx-auto max-w-6xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -97,7 +104,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Skills Section - Compact Grid */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -135,7 +142,7 @@ export default function Experience() {
 
         {/* Work Experience */}
         <div className="space-y-8">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

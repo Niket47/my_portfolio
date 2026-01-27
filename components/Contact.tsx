@@ -1,14 +1,26 @@
 'use client';
 
 import { Mail, Linkedin, Phone } from 'lucide-react';
+import { useEffect } from 'react';
+import Cal, { getCalApi } from '@calcom/embed-react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: '30min' });
+      cal('ui', {
+        theme: 'light',
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+      });
+    })();
+  }, []);
 
   return (
     <section id="contact" className="py-20 sm:py-32 px-6 bg-black/[0.02]">
       <div className="container mx-auto max-w-6xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -20,7 +32,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact Info Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -35,10 +47,10 @@ export default function Contact() {
               <div>
                 <h3 className="text-black font-bold font-sans uppercase tracking-widest text-xs mb-1">Email</h3>
                 <a
-                  href="mailto:rushantgolakiya@gmail.com"
+                  href="mailto:dadyaniyaniket153@gmail.com"
                   className="text-black/60 hover:text-black transition-colors font-mono text-sm sm:text-base border-b border-black/10 hover:border-black"
                 >
-                  rushantgolakiya@gmail.com
+                  dadyaniyaniket153@gmail.com
                 </a>
               </div>
             </div>
@@ -50,10 +62,10 @@ export default function Contact() {
               <div>
                 <h3 className="text-black font-bold font-sans uppercase tracking-widest text-xs mb-1">Phone</h3>
                 <a
-                  href="tel:+918490805136"
+                  href="tel:+919978892153"
                   className="text-black/60 hover:text-black transition-colors font-mono text-sm sm:text-base border-b border-black/10 hover:border-black"
                 >
-                  +91 8490805136
+                  +91 9978892153
                 </a>
               </div>
             </div>
@@ -64,7 +76,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-black font-bold font-sans uppercase tracking-widest text-xs mb-1">LinkedIn</h3>
                 <a
-                  href="https://www.linkedin.com/in/rushantgolakiya"
+                  href="https://www.linkedin.com/in/niketdadhaniya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black/60 hover:text-black transition-colors font-mono text-sm sm:text-base border-b border-black/10 hover:border-black"
@@ -77,7 +89,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Cal.com Embed Section - Full Width Below */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -85,11 +97,15 @@ export default function Contact() {
           className="w-full"
         >
           <div className="border border-black/10 rounded-[2.5rem] p-4 sm:p-8 md:p-12 overflow-hidden min-h-[600px] bg-white shadow-2xl">
-            <div className="flex items-center justify-center h-full min-h-[600px]">
-              <p className="text-black/60 font-mono text-center">
-                Schedule a meeting by contacting me via email or phone
-              </p>
-            </div>
+            <Cal
+              namespace="30min"
+              calLink="niketdadhaniya"
+              style={{ width: '100%', height: '100%', overflow: 'scroll' }}
+              config={{
+                layout: 'month_view',
+                theme: 'light',
+              }}
+            />
           </div>
         </motion.div>
       </div>

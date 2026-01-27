@@ -55,8 +55,8 @@ export default function Hero() {
   const downloadResume = () => {
     setIsDownloading(true);
     const link = document.createElement('a');
-    link.href = '/resume/Rushantkumar_RN_Dev_Resume.pdf';
-    link.download = 'Rushantkumar_RN_Dev_Resume.pdf';
+    link.href = '/resume/Niket_RN_Dev_Resume.pdf';
+    link.download = 'Niket_RN_Dev_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -75,7 +75,7 @@ export default function Hero() {
       <div className="container mx-auto max-w-4xl lg:max-w-5xl">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
           {/* Profile Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -83,8 +83,8 @@ export default function Hero() {
           >
             <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-black/10 relative shadow-[0_0_40px_rgba(0,0,0,0.05)]">
               <Image
-                src="/img/rushantavatar.png"
-                alt="Rushant Golakiya"
+                src="/img/meimage.jpeg"
+                alt="Niket Dadhaniya"
                 fill
                 className="object-cover"
                 priority
@@ -93,7 +93,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -101,7 +101,7 @@ export default function Hero() {
           >
             <p className="text-black/40 mb-2 font-mono uppercase tracking-widest text-xs sm:text-sm">Hello, I'm</p>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black mb-4 font-sans tracking-tight">
-              Rushant Golakiya
+              Niket Dadhaniya
             </h1>
             <div className="text-xl sm:text-2xl text-black/80 font-mono mb-8 border-l-4 border-black pl-4 h-[1.5em] flex items-center min-w-full sm:min-w-[350px] md:min-w-0">
               <span className="whitespace-nowrap overflow-hidden">
@@ -110,9 +110,9 @@ export default function Hero() {
               </span>
             </div>
             <p className="text-sm sm:text-base text-black/40 mb-10 font-mono">
-              Surat, Gujarat, India <br/> 
-              <a href="mailto:rushantgolakiya@gmail.com" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">rushantgolakiya@gmail.com</a> <br/>
-              <a href="tel:+918490805136" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">+91 8490805136</a>
+              Surat, Gujarat, India <br />
+              <a href="mailto:dadyaniyaniket153@gmail.com" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">dadyaniyaniket153@gmail.com</a> <br />
+              <a href="tel:+919978892153" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">+91 9978892153</a>
             </p>
 
             {/* CTA Buttons */}
@@ -141,7 +141,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="flex gap-6 justify-center md:justify-start">
               <motion.a
-                href="https://github.com/rushantgolakiya"
+                href="https://github.com/Niket47"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0 }}
@@ -152,7 +152,7 @@ export default function Hero() {
                 <Github size={24} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/rushantgolakiya"
+                href="https://www.linkedin.com/in/niket-dadhaniya-app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0 }}
@@ -167,7 +167,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}

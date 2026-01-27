@@ -52,9 +52,8 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-sm py-4 border-b border-black/10' : 'bg-transparent py-6'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm py-4 border-b border-black/10' : 'bg-transparent py-6'
+          }`}
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-center relative">
@@ -63,8 +62,8 @@ export default function Navigation() {
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return item.isRoute ? (
-                  <Link 
-                    key={item.name} 
+                  <Link
+                    key={item.name}
                     href={item.href}
                     className="text-black/60 hover:text-black transition-colors font-medium tracking-tight text-sm uppercase flex items-center gap-2"
                   >
@@ -102,7 +101,7 @@ export default function Navigation() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="fixed inset-0 bg-black/40 z-[90] md:hidden"
           />
-          
+
           {/* Drawer */}
           <div className="fixed top-0 right-0 h-full w-72 bg-white z-[110] shadow-xl md:hidden flex flex-col">
             <div className="flex items-center justify-between px-6 py-6 border-b border-black/10">
@@ -139,9 +138,9 @@ export default function Navigation() {
                 })}
               </nav>
             </div>
-            
+
             <div className="p-6 border-t border-black/10 text-center">
-              <p className="text-xs text-black/40 font-mono">© {new Date().getFullYear()} Rushant Golakiya</p>
+              <p className="text-xs text-black/40 font-mono">© {new Date().getFullYear()} Niket Dadhaniya</p>
             </div>
           </div>
         </>

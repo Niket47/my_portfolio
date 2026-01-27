@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
-      
+
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-5xl">
           {/* Top Bar */}
@@ -61,7 +61,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black font-sans tracking-tight mb-8">
                 {project.title}
               </h1>
-              
+
               <div className="flex flex-col gap-6">
                 {project.timeframe && (
                   <div className="flex items-center gap-3 text-black/40 font-mono text-sm uppercase tracking-widest">
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     <span>{project.timeframe}</span>
                   </div>
                 )}
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
@@ -82,7 +82,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 </div>
 
                 <div className="flex flex-wrap gap-4 mt-4">
-                  <a
+                  {/* <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -90,17 +90,17 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                   >
                     <Github size={16} />
                     GitHub
-                  </a>
-                  {project.live !== '#' && (
+                  </a> */}
+                  {project.app_link !== '' && (
                     <a
-                      href={project.live}
+                      href={project.app_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-black hover:text-white transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2"
                     >
                       <ExternalLink size={16} />
-                  Visit Site
-                </a>
+                      Visit Site
+                    </a>
                   )}
                 </div>
               </div>

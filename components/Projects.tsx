@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 sm:py-32 px-6">
       <div className="container mx-auto max-w-6xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,21 +61,32 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-black font-sans mb-6 tracking-tight group-hover:text-black/70 transition-colors">
                   {project.title}
                 </h3>
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 mt-auto" onClick={(e) => e.stopPropagation()}>
-                  <button
+                  {/* <button
                     onClick={() => router.push(`/projects/${project.slug}`)}
                     className="w-full px-4 py-3 bg-black text-white border-2 border-black rounded-xl font-bold hover:bg-white hover:text-black transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
                   >
                     Case Study
-                  </button>
-                  <div className="flex gap-3">
+                  </button> */}
+                  {project.app_link !== '' && (
                     <a
+                      href={project.app_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full px-4 py-3 bg-black text-white border-2 border-black rounded-xl font-bold hover:bg-white hover:text-black transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink size={16} />
+                      Visit Site
+                    </a>
+                  )}
+                  <div className="flex gap-3">
+                    {/* <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -83,7 +94,7 @@ export default function Projects() {
                     >
                       <Github size={14} />
                       Github
-                    </a>
+                    </a> */}
                     {project.live !== '#' && (
                       <a
                         href={project.live}
@@ -103,7 +114,7 @@ export default function Projects() {
         </div>
 
         {/* Browse All Button - Bottom Center */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

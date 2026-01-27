@@ -32,8 +32,8 @@ export default function ProjectsPage() {
               </Link>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black font-sans tracking-tight">All Projects</h1>
             </motion.div>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-black font-sans mb-6 tracking-tight group-hover:text-black/70 transition-colors">
                     {project.title}
                   </h3>

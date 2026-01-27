@@ -28,7 +28,7 @@ export default function Footer() {
           </ul>
         </nav>
         <p className="text-center text-black/60 text-xs sm:text-sm">
-          Copyright © {currentYear} Rushant Golakiya. All Rights Reserved.
+          Copyright © {currentYear} Niket Dadhaniya. All Rights Reserved.
         </p>
       </div>
     </footer>
