@@ -54,21 +54,6 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center">
-                <Phone size={20} />
-              </div>
-              <div>
-                <h3 className="text-black font-bold font-sans uppercase tracking-widest text-xs mb-1">Phone</h3>
-                <a
-                  href="tel:+919978892153"
-                  className="text-black/60 hover:text-black transition-colors font-mono text-sm sm:text-base border-b border-black/10 hover:border-black"
-                >
-                  +91 9978892153
-                </a>
-              </div>
-            </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center">
                 <Linkedin size={20} />
@@ -89,7 +74,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Cal.com Embed Section - Full Width Below */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -107,7 +92,7 @@ export default function Contact() {
               }}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

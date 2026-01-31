@@ -112,7 +112,6 @@ export default function Hero() {
             <p className="text-sm sm:text-base text-black/40 mb-10 font-mono">
               Surat, Gujarat, India <br />
               <a href="mailto:dadyaniyaniket153@gmail.com" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">dadyaniyaniket153@gmail.com</a> <br />
-              <a href="tel:+919978892153" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">+91 9978892153</a>
             </p>
 
             {/* CTA Buttons */}

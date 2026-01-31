@@ -52,7 +52,7 @@ export default function About() {
                 <Award size={24} />
               </div>
               <h3 className="text-xl font-bold text-black mb-2 font-sans">Experience</h3>
-              <p className="text-black/60 font-mono text-sm">2.5+ years</p>
+              <p className="text-black/60 font-mono text-sm">3+ years</p>
               <p className="text-black/80 text-sm">React Native Development</p>
             </div>
 
