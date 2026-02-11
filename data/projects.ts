@@ -25,6 +25,18 @@ export const allProjects: Project[] = [
     app_link: "https://play.google.com/store/apps/details?id=com.clashquiz.quiz&hl=en_IN"
   },
   {
+    title: 'Free Fire Quiz',
+    description: 'Free Fire game fans play games like spin, daily offerings rewards, get coins in reward and coins convert with diamonds.',
+    technologies: ['Game Development', 'Admob', "Adx", 'Rewards'],
+    github: '#',
+    live: '#',
+    image: '/img/projects/fff/fff.webp',
+    isLogo: true,
+    timeframe: '2024',
+    slug: 'free-fire-quiz',
+    app_link: "https://play.google.com/store/apps/details?id=com.freefire.quizz.apk&pcampaignid=web_share"
+  },
+  {
     title: 'Live 101 (Artiest Booking Project)',
     description: 'Project is based on an artists and singers\' booking system. Implement real-time chat functionality with typing indicators and message read receipts, providing a seamless communication experience.',
     technologies: ['React Native', 'Real-time Chat', 'Booking System'],
