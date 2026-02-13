@@ -111,7 +111,7 @@ export default function Hero() {
             </div>
             <p className="text-sm sm:text-base text-black/40 mb-10 font-mono">
               Surat, Gujarat, India <br />
-              <a href="mailto:dadyaniyaniket153@gmail.com" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">dadyaniyaniket153@gmail.com</a> <br />
+              <a href="mailto:dadhaniyaniket153@gmail.com" className="text-black/80 hover:text-black transition-colors decoration-1 underline underline-offset-4">dadhaniyaniket153@gmail.com</a> <br />
             </p>
 
             {/* CTA Buttons */}
