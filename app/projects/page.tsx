@@ -33,14 +33,14 @@ export default function ProjectsPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black font-sans tracking-tight">All Projects</h1>
             </motion.div>
 
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-black/40 text-sm sm:text-base max-w-md font-mono"
             >
               A comprehensive showcase of my work, ranging from full-stack web applications to complex mobile solutions.
-            </motion.p>
+            </motion.p> */}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
                   {/* Overlay on Hover */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <span className="text-white font-bold text-sm uppercase tracking-widest border-2 border-white px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      View Case Study
+                      View
                     </span>
                   </div>
                 </div>
@@ -85,13 +85,26 @@ export default function ProjectsPage() {
 
                   {/* Buttons */}
                   <div className="flex flex-col gap-3 mt-auto" onClick={(e) => e.stopPropagation()}>
-                    <button
+
+
+                    {project.app_link !== '' && (
+                      <a
+                        href={project.app_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-black hover:text-white transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2"
+                      >
+                        <ExternalLink size={16} />
+                        Visit Site
+                      </a>
+                    )}
+                    {/* <button
                       onClick={() => router.push(`/projects/${project.slug}`)}
                       className="w-full px-4 py-3 bg-black text-white border-2 border-black rounded-xl font-bold hover:bg-white hover:text-black transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
                     >
                       Case Study
-                    </button>
-                    <div className="flex gap-3">
+                    </button> */}
+                    {/* <div className="flex gap-3">
                       <a
                         href={project.github}
                         target="_blank"
@@ -112,7 +125,7 @@ export default function ProjectsPage() {
                           Visit
                         </a>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>

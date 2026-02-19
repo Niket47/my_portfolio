@@ -46,6 +46,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <div className="container mx-auto max-w-5xl">
           {/* Top Bar */}
           <div className="mb-12">
+
             <Link
               href="/projects"
               className="inline-flex items-center gap-2 text-black/40 hover:text-black transition-colors font-mono uppercase tracking-widest text-[10px]"
@@ -53,15 +54,28 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               <ArrowLeft size={14} />
               <span>Back to Projects</span>
             </Link>
+
+
           </div>
 
           {/* Header Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20">
             <div>
+
+              <div className='flex items-center gap-4 mb-8'>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={100}
+                  height={100}
+                  className={project.isLogo ? 'object-contain' : 'object-cover'}
+                  priority
+                />
+              </div>
+
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black font-sans tracking-tight mb-8">
                 {project.title}
               </h1>
-
               <div className="flex flex-col gap-6">
                 {project.timeframe && (
                   <div className="flex items-center gap-3 text-black/40 font-mono text-sm uppercase tracking-widest">
@@ -114,7 +128,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           </div>
 
           {/* Hero Image */}
-          <div className={`aspect-[16/9] relative rounded-[2.5rem] overflow-hidden border border-black/10 mb-24 shadow-2xl ${project.isLogo ? 'bg-white p-20' : 'bg-black/5'}`}>
+          {/* <div className={`aspect-[16/9] relative rounded-[2.5rem] overflow-hidden border border-black/10 mb-24 shadow-2xl ${project.isLogo ? 'bg-white p-20' : 'bg-black/5'}`}>
             <Image
               src={project.image}
               alt={project.title}
@@ -122,16 +136,54 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               className={project.isLogo ? 'object-contain' : 'object-cover'}
               priority
             />
-          </div>
+          </div> */}
+
+          {/* Key Features Section */}
+          {project?.keyFeatures && project?.keyFeatures?.length > 0 && (
+            <div className="mb-24">
+              <div className="flex flex-col gap-2 mb-12">
+                <div className="flex items-center gap-3">
+                  <div className="h-6 w-[2px] bg-black rounded-full" />
+                  <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-black/40">Technical Highlights</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-black font-sans tracking-tight uppercase">Key Features</h2>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {project.keyFeatures.map((feature, index) => {
+                  const [title, ...descriptionParts] = feature.split(':');
+                  const hasTitle = descriptionParts.length > 0;
+                  const displayTitle = hasTitle ? title.trim() : "";
+                  const displayDescription = hasTitle ? descriptionParts.join(':').trim() : feature.trim();
+
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 group"
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-black mt-[10px] shrink-0" />
+
+                      <div className="flex flex-col gap-1">
+                        {hasTitle && (
+                          <h3 className="text-[16px] font-bold text-black font-sans tracking-tight">
+                            {displayTitle}
+                          </h3>
+                        )}
+                        <p className="text-black/100 font-sans text-[16px] leading-relaxed tracking-wide">
+                          {displayDescription}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Content Section */}
-          <div className="max-w-3xl mx-auto">
+          {/* <div className="max-w-3xl mx-auto">
             {caseStudyContent ? (
               <div className="prose prose-neutral prose-lg max-w-none prose-headings:font-sans prose-headings:tracking-tight prose-headings:font-bold prose-p:font-mono prose-p:text-black/70 prose-strong:text-black prose-li:font-mono">
-                {/* 
-                  Note: In a real production app, we would use next-mdx-remote or contentlayer 
-                  to properly render MDX. For now, we improve the display of the raw content.
-                */}
                 <div className="whitespace-pre-wrap leading-relaxed">
                   {caseStudyContent}
                 </div>
@@ -143,7 +195,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 <p className="text-black/20 font-mono mt-2">I am currently documenting the process for this project.</p>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
