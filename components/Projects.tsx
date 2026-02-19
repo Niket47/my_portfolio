@@ -44,12 +44,6 @@ export default function Projects() {
                   fill
                   className={project.isLogo ? 'object-contain' : 'object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out'}
                 />
-                {/* Overlay on Hover */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm uppercase tracking-widest border-2 border-white px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    View Case Study
-                  </span>
-                </div>
               </div>
 
               {/* Card Content */}
@@ -68,33 +62,18 @@ export default function Projects() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 mt-auto" onClick={(e) => e.stopPropagation()}>
-                  {/* <button
-                    onClick={() => router.push(`/projects/${project.slug}`)}
-                    className="w-full px-4 py-3 bg-black text-white border-2 border-black rounded-xl font-bold hover:bg-white hover:text-black transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
-                  >
-                    Case Study
-                  </button> */}
-                  {project.app_link !== '' && (
+                  {project?.app_link !== '' && (
                     <a
-                      href={project.app_link}
+                      href={project?.app_link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full px-4 py-3 bg-black text-white border-2 border-black rounded-xl font-bold hover:bg-white hover:text-black transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
+                      className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-black hover:text-white transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2"
                     >
                       <ExternalLink size={16} />
                       Visit Site
                     </a>
                   )}
                   <div className="flex gap-3">
-                    {/* <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 px-4 py-3 bg-white border border-black text-black font-bold rounded-xl hover:bg-black hover:text-white transition-all text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2"
-                    >
-                      <Github size={14} />
-                      Github
-                    </a> */}
                     {project.live !== '#' && (
                       <a
                         href={project.live}
